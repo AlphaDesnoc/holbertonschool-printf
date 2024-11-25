@@ -37,4 +37,5 @@ int _int(va_list args)
 	}
 
 	return (numcount);
+
 }

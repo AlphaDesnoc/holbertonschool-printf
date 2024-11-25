@@ -7,6 +7,14 @@
 #include <stdarg.h>
 #include <stdint.h>
 
+/**
+  * struct types - list of types and their associated functions.
+  * Description: This structure pairs a format specifier character with a
+  * function pointer to *f.
+  *
+  * @type: The format specifier character that indicates the data type.
+  * @f: A function pointer that process data type specified by `types`.
+  */
 typedef struct types
 {
 	char type;
@@ -23,3 +31,4 @@ int _printf(const char *format, ...);
 
 
 #endif
+
