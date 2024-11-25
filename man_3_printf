@@ -1,0 +1,76 @@
+.TH _PRINTF 1 "November 2024" "Holberton School" "User Commands"
+
+.SH NAME
+_printf \- custom printf function
+
+.SH SYNOPSIS
+.B #include "main.h"
+.PP
+.B int _printf(const char *format, ...)
+.BR "..." 
+
+.SH DESCRIPTION
+.PP
+The _printf function produces output to stdout according to a format specified below, similar to the standard printf() function.
+
+.SH OPTIONS
+.RS
+.nf
+.B %c
+Prints a single character.
+.B %s
+Prints a string.
+.B %%
+Prints a single percentage sign to the stream.
+.B %i
+Prints a signed decimal integer.
+.B %d
+Prints a signed decimal integer.
+.RE
+
+.SH EXAMPLES
+.PP
+The following example demonstrates how to use the \fB_printf\fR function:
+.nf
+.B #include "main.h"
+.B 
+.B int main(void)
+.B {
+.B     int len;
+.B     int len2;
+.B     unsigned int ui;
+.B     void *addr;
+.B 
+.B     len = _printf("Let's try to printf a simple sentence.\n");
+.B     len2 = printf("Let's try to printf a simple sentence.\n");
+.B     ui = (unsigned int)INT_MAX + 1024;
+.B     addr = (void *)0x7ffe637541f0;
+.B 
+.B     _printf("Length:[%d, %i]\n", len, len);
+.B     printf("Length:[%d, %i]\n", len2, len2);
+.B     _printf("Negative:[%d]\n", -762534);
+.B     printf("Negative:[%d]\n", -762534);
+.B     _printf("Unsigned:[%u]\n", ui);
+.B     printf("Unsigned:[%u]\n", ui);
+.B     _printf("Unsigned octal:[%o]\n", ui);
+.B     printf("Unsigned octal:[%o]\n", ui);
+.B     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+.B     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+.B     _printf("Character:[%c]\n", 'H');
+.B     printf("Character:[%c]\n", 'H');
+.B     _printf("String:[%s]\n", "I am a string !");
+.B     printf("String:[%s]\n", "I am a string !");
+.B     _printf("Address:[%p]\n", addr);
+.B     printf("Address:[%p]\n", addr);
+.B     len = _printf("Percent:[%%]\n");
+.B     len2 = printf("Percent:[%%]\n");
+.B     _printf("Len:[%d]\n", len);
+.B     printf("Len:[%d]\n", len2);
+.B     _printf("Unknown:[%r]\n");
+.B     printf("Unknown:[%r]\n");
+.B     return (0);
+.B }
+.RE
+
+.SH AUTHORS
+CHAUVIN Mickael et BOUQETYB Noumane.
