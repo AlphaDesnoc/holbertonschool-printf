@@ -6,32 +6,39 @@
  *
  * Return: the number of characters printed
  */
-
 int _printf(const char *format, ...)
 {
+	int i = 0, numcount = 0;
 	va_list args;
-	int i = 0, count = 0;
+
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 
 	va_start(args, format);
-	if (format == NULL)
-		return (-1);
-	while (format[i])
+
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			if (format[i] == '\0')
-				return (-1);
-			if (format[i] == '%')
-				count += _putchar('%');
+			if (format[i + 1] != '\0')
+			{
+				numcount += _format(format[i + 1], args);
+				i++;
+			}
 			else
-				count += _format(format[i], args);
+				return (-1);
 		}
 		else
-			count += _putchar(format[i]);
-		i++;
+		{
+			_putchar(format[i]);
+			numcount++;
+		}
 	}
+
 	va_end(args);
-	return (count);
+	return (numcount);
 
 }
