@@ -11,14 +11,17 @@
 int _string(va_list args)
 {
 	char *str = va_arg(args, char *);
-	int i;
+	int i = 0;
 
 	if (str == NULL)
 		str = "(null)";
-	for (i = 0; str[i]; i++)
+
+	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
+		i++;
 	}
+
 	return (i);
 
 }
