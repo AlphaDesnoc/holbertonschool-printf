@@ -1,2 +1,2 @@
 # holbertonschool-printf
-Projet de groupe avec Noumane Bouqetyb
+Projet de groupe avec Julie Tolve
