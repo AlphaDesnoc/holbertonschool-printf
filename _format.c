@@ -24,5 +24,9 @@ int _format(const char type, va_list args)
 			return (types[i].f(args));
 		i++;
 	}
-	return (0);
+
+
+	_putchar('%');
+	_putchar(type);
+	return (2);
 }

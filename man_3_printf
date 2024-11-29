@@ -44,4 +44,4 @@ Outpout: integer: 8
 Upon successful execution, _printf returns the number of characters printed, or returns -1 on error.
 
 .SH AUTHORS
-CHAUVIN Mickael et BOUQETYB Noumane.
+CHAUVIN Mickael et TOLVE Julie.
