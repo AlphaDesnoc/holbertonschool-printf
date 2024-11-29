@@ -29,4 +29,5 @@ int _format(const char type, va_list args)
 	_putchar('%');
 	_putchar(type);
 	return (2);
+
 }
