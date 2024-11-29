@@ -15,6 +15,10 @@ int _format(const char type, va_list args)
 		{'d', _int},
 		{'i', _int},
 		{'u', _unsigned},
+		{'o', _octal},
+		{'x', _lower_hex},
+		{'X', _upper_hex},
+		{'p', _address},
 		{'\0', NULL}
 	};
 	int i = 0;
