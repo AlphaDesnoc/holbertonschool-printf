@@ -27,6 +27,7 @@ int _putchar(char c);
 int _char(va_list args);
 int _string(va_list args);
 int _int(va_list args);
+int _unsigned(va_list args);
 int _printf(const char *format, ...);
 
 
