@@ -31,3 +31,4 @@ int _format(const char type, va_list args)
 	return (2);
 
 }
+
